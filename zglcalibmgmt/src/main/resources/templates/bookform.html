@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="pink">
+<form action="#" th:action="@{/books/save}" method="POST" th:object="${book}">
+<input type="hidden" th:field="*{id}" /><br>
+Title <input type="text" th:field="*{title}" /><br>
+Category <input type="text" th:field="*{category}" /><br>
+Author <input type="text" th:field="*{author}" /><br>
+<input type="submit" value="Save" />
+</form>
+<a th:href="@{/books/list}">Go Back To Books List</a>
+
+</body>
+</html>
